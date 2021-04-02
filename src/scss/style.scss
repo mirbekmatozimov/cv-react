@@ -1,0 +1,326 @@
+//default styles
+
+@import "normalize";
+@import "mmenu";
+@import "mburger";
+
+
+
+//global components styles
+
+@import "global";
+
+
+//custom styles
+
+///////////////////////////////////////////////////////////////////////////////////
+.header-top{
+    box-shadow: 0px 16px 54px rgba(0, 0, 0, 0.08);
+
+    .container{
+        min-height: 90px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    &__logo{
+        margin-right: 60px;
+    }
+
+    &__menu{
+        margin-right: 150px;
+    }
+
+    &__socials{
+        margin-right: 50px;
+    }
+
+    &__search{
+        margin-right: 25px;
+        
+        svg{
+            transition: all 0.3s;
+
+            &:hover{
+                fill: $green-hover;                
+            }
+        }
+
+        svg {
+            fill: #7ECA9C;
+            width: 20px;
+        }
+    }
+}
+
+.header-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85vh;
+
+    &__info{
+        max-width: 510px;
+    }
+
+    &__title{
+        margin: 0 0 16px 0;
+    }
+
+    &__text{
+        margin: 0 0 14px;
+    }
+
+    &__img{
+        padding: 0 36px 0 0;
+        img{
+            height: 65vh;
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+.tools{
+    min-height: 80vh;
+
+    .container{
+        display: flex;
+        align-items: center;
+    }
+
+    &__cards{
+        max-width: 540px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        img{
+            position: relative;
+            vertical-align: top;
+        }
+
+        .card_design{
+            margin: 5px 68px 0 0;
+        }
+        
+        .card_backend{
+            margin: 40px 0 0 166px;
+        }
+    }
+
+    &__info{
+        margin: 0 0 0 92px;
+        max-width: 567px;
+    }
+
+    &__text{
+        margin: 0 0 22px;
+    }
+}
+
+
+//////////////////////////
+//img positionning
+
+[alt = figma]{
+    top: 29px;
+    left: 25px;
+}
+
+[alt = photoshop]{
+    top: 7px;
+    left: 45px;
+}
+
+[alt = "adobe illustrator"]{
+    top: 90px;
+    right: 74px;
+}
+
+[alt = html]{
+    top: 22px;
+    left: 21px;
+}
+
+[alt = css]{
+    top: 22px;
+    left: 20px;
+}
+
+[alt = react]{
+    top: 11px;
+    left: 47px;
+}
+
+[alt = gulp]{
+    top: 85px;
+    right: 160px;
+}
+
+[alt = jquery]{
+    top: 15px;
+    left: 80px;
+}
+
+[alt = js]{
+    top: 20px;
+    left: 114px;
+}
+
+[alt = ejs]{
+    top: 20px;
+    left: 60px;
+}
+
+[alt = express]{
+    top: 20px;
+    left: 50px;
+}
+
+[alt = mongoose]{
+    top: 42px;
+    right: 60px;
+}
+
+[alt = mongodb]{
+    top: 20px;
+    left: 40px;
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+.works__heading{
+    max-width: 470px;
+    
+    .works__text{
+        margin: 0 0 45px 0;
+    }
+}
+
+.works__portfolio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .works__card{
+        width: 360px;
+        height: 232px;
+        box-shadow: 0px 4px 10px 10px rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+        margin: 0 0 55px 0;
+        position: relative;
+        overflow: hidden;
+
+        .black-overlay{
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: $text-color;
+            transition: all 0.3s;
+            opacity: 0;
+        }
+
+        .bottom-pop-up{
+            position: absolute;
+            top: 100%;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: $text-color;
+            text-align: center;
+            color: #fff;
+            line-height: 2.5;
+            transition: all 0.3s;
+            // opacity: 0.2;
+        }
+
+        &:hover{
+            .black-overlay{
+                opacity: 0.2;
+            }
+            .bottom-pop-up{
+                top: 80%;
+            }
+        }
+
+        img{
+            width: 360px;
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+.contacts{
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @import "form";
+
+    &__info{
+        max-width: 526px;
+    }
+
+    &__text{
+        margin: 0 0 70px 0;
+    }
+
+    &__datas{
+        font-family: "Quicksand", sans-serif;
+        font-size: 25px;
+        line-height: 35px;
+
+        p{
+            margin: 0 0 33px 0;
+        }
+    }
+
+    &__socials{
+        a+a{
+            svg{
+                margin: 0 0 0 69px;
+            }    
+        }
+        svg{
+            fill: $custom-green;
+            transition: all 0.3s;
+
+            &:hover{
+                fill: $green-hover;
+            }
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+.footer{
+    background: $text-color;
+    color: rgba(#fff, 0.3);
+    padding: 34px 0;
+
+    .menu{
+        a:hover{
+            color: $custom-green;
+        }
+    }
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__socials{        
+        svg{
+            fill: rgba(#fff, 0.3);
+
+            &:hover{
+                fill: $custom-green;
+            }
+        }
+    }
+}
+
+@import "media";

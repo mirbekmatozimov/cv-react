@@ -1,0 +1,124 @@
+//form styling
+.group{
+    position: relative;
+    margin-bottom:25px;
+}
+
+input, textarea{
+    padding: 18px 14px;
+    display: block;
+    width: 500px;
+    border: 1px solid #A7A7A7;
+    border-radius: 5px;
+
+    &:focus{
+        outline: none;
+    }
+}
+
+textarea{
+    height:170px;
+}
+
+label{
+    color:#999; 
+    position:absolute;
+    pointer-events: none;
+    top: 18px;
+    left: 14px;
+    transition:0.2s ease all; 
+    -moz-transition:0.2s ease all; 
+    -webkit-transition:0.2s ease all;
+}
+//active state
+input:focus ~ label, 
+input:valid ~ label, 
+textarea:focus ~ label, 
+textarea:valid ~ label{
+    top:-12px;
+    font-size:14px;
+    color: $text-color;
+    background: #fff;
+    padding: 0 5px;
+}
+//bottom bars
+.bar{
+    position: relative;
+    display: block;
+    width: 500px;
+
+    &::before,
+    &::after{
+        content: "";
+        height: 2px;
+        position: absolute;
+        bottom: 1px;
+        width: 0;
+        background: $text-color; 
+        transition:0.2s ease all; 
+        -moz-transition:0.2s ease all; 
+        -webkit-transition:0.2s ease all;
+    }
+
+    &::before {
+        left:50%;
+    }
+
+    &::after {
+        right:50%; 
+    }
+}
+
+//active state
+input:focus ~ .bar:before, 
+input:focus ~ .bar:after, 
+textarea:focus ~ .bar:before, 
+textarea:focus ~ .bar:after {
+    width:50%;
+}
+
+.highlight{
+    position: absolute;
+    height:60%; 
+    width: 100px;
+    top:25%; 
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+}
+
+textarea ~ .highlight{
+    height: 20%;
+    top: 10%;
+}
+
+/* active state */
+input:focus ~ .highlight,
+textarea:focus ~ .highlight{
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+}
+
+// highlight animation
+@-webkit-keyframes inputHighlighter {
+    from { background: $text-color; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+    from { background: $text-color; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+    from { background: $text-color; }
+  to 	{ width:0; background:transparent; }
+}
+
+button{
+    background: #fff;
+    border: 1px solid #A7A7A7;
+    color: #A7A7A7;
+    padding: 10px 22px;
+    box-shadow: none;
+    float: right;
+}

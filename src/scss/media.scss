@@ -1,0 +1,345 @@
+//long part separator
+///////////////////////////////////////////////////////////////////////////////////
+
+//short part separator
+//////////////////////////
+
+@media (max-width: 1260px){
+    .tools__cards{
+        flex-direction: column;
+
+        .card{
+            margin: 0;
+            transform: rotate(5deg);
+            background: #fff;
+        }
+
+        .card + .card{
+            margin-top: 30px;
+        }
+
+        .card_frontend{
+            position: relative;
+            bottom: 100px;
+            left: 50%;
+            transform: rotate(-10deg);
+        }
+
+        .card_backend{
+            position: relative;
+            bottom: 150px;
+            left: 5%;
+            transform: rotate(-5deg);
+        }
+    }
+}
+///////////////////////////////////////////////////////////////////////////////////
+
+@media (max-width: 1240px){
+    .header-top{
+        &__socials,
+        &__search{
+            display: none;
+        }
+        &__btn{
+            margin-left: auto;
+        }
+    }
+
+    //////////////////////////
+    .works__portfolio{
+        justify-content: space-around;
+    }
+    //////////////////////////
+    .contacts{
+        &__info{
+            margin-left: 40px;
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+@media (max-width: 1020px){
+    .header{
+        height: auto;
+    }
+    .header-top{
+        &__menu{
+            margin-right: 30px;
+        }
+    }
+
+    .header-body{
+        &__info{
+            margin-right: 40px;
+        }
+    }
+    //////////////////////////
+        
+    .card.card_frontend{
+        bottom: 100px;
+        left: 50%;
+        transform: rotate(-10deg);
+    }
+
+    .card.card_backend{
+        bottom: 150px;
+        left: 5%;
+        transform: rotate(-5deg);
+    }
+    //////////////////////////
+
+    .footer{
+        .container{
+            flex-wrap: wrap;
+            div, nav, p{
+                width: 100%;
+                text-align: center;
+            }
+        }
+        nav{
+            a{
+                padding: 15px;
+            }
+        }
+        &__socials{
+            margin-bottom: 10px;
+        }
+        &__copy{
+            order: 1;
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+@media (max-width: 884px){
+    .header-top{
+        &__menu{
+            margin-right: 0px;
+            margin-left: auto;
+        }
+
+        &__btn{
+            display: none;
+        }
+    }
+
+    //////////////////////////
+    .header-body{
+        height: auto;
+        flex-direction: column-reverse;
+        padding: 60px 0;
+        
+        &__img{
+            padding: 0;
+            margin-bottom: 30px;
+
+            img{
+                width: 60vw;
+            }
+        }
+
+        &__info{
+            margin-right: 0;
+        }
+    }
+
+    //////////////////////////
+    .tools{
+        .container{
+            flex-direction: column;
+        }
+
+        &__cards{
+            margin-bottom: -10%;
+        }
+
+        &__info{
+            margin: 0;
+        }
+    }
+
+    .card.card_frontend{
+        transform: rotate(-10deg);
+        bottom: 100px;
+        left: 50%;
+    }
+
+    .card.card_backend{
+        transform: rotate(10deg);
+        bottom: 180px;
+        left: 0;
+    }
+    
+    //////////////////////////
+    .works{
+        &__heading{
+            margin: 0 auto;
+            max-width: 560px;
+        }
+
+        &__portfolio{
+            .works__card{
+                width: 40vw;
+            }
+        }
+    }
+
+    //////////////////////////
+    .contacts{
+        .container{
+            flex-direction: column-reverse;
+        }
+        &__info{
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom: 40px;
+        }
+        &__form{
+            form{
+                text-align: center;
+            }
+            .group{
+                display: inline-block;
+                text-align: center;
+                width: 80vw;
+
+                .bar{
+                    width: 100%;
+                }
+            }
+            button{
+                float: none;
+                display: block;
+                margin: 0 auto;
+            }
+            input, textarea{
+                width: 100%;
+            }
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+@media (max-width: 740px){
+    .header-top{
+        .container{
+            padding: 0 15px 0 30px;
+        }
+    }
+    .header-top__menu{
+        li{
+            margin: 0 auto;
+        }
+    }
+    
+    .mburger{
+        display: block;
+        margin-left: auto;
+    }
+
+    .mburger.mburger-close{
+        margin-left: 0;
+        padding-top: 55px;
+    }
+
+    //////////////////////////
+    .works{
+        &__portfolio{
+            .works__card{
+                width: 80vw;
+                height: auto;
+
+                img{
+                    width: 80vw;
+                }
+            }
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+@media (max-width: 620px){
+    h1{
+        font-size: 35px;
+        line-height: 1.5;
+    }
+
+    .header-body{
+        &__img{
+            img{
+                height: auto;
+            }
+        }
+    }
+
+//////////////////////////
+    .tools{
+        &__cards{
+            margin-bottom: -20%;
+        }
+        .card{
+            width: 50vw;
+            padding: 10px;
+            height: auto;
+            text-align: center;
+
+            img{
+                position: static;
+                padding: 5px;
+                
+            }
+        }
+        .card_frontend{
+            left: 40%;
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////////////////
+@media (max-width: 425px){
+    h1{
+        font-size: 30px;
+    }
+
+    .header-top{
+        .container{
+            padding: 0 0 0 15px;
+        }
+
+        &__logo{
+            margin-right: 0;
+        }
+    }
+
+//////////////////////////
+    .tools{
+        .container{
+            flex-direction: column-reverse;
+        }
+    }
+    .tools__cards{       
+        margin-top: 40px;
+        margin-bottom: 0; 
+        .card{
+            position: static;
+            margin: 0 auto;
+        }
+    }
+    //////////////////////////
+
+    .contacts{
+        &__datas{
+            p{
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+/////////////////////////////////////  MIN WIDTH  ///////////////////////////////////
+@media (min-width: 426px){
+    .mburger.mburger-close{
+        display: none;
+    }
+}
