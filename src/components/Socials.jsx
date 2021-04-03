@@ -1,8 +1,8 @@
 import React from "react";
 
-export default ()=>{
+export default props => {
     return (
-        <div className="header-top__socials socials">
+        <div className={`${props.addClass} socials`}>
                   <a href="#" className="twitter">
                     <svg
                       version="1.1"

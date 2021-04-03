@@ -3,6 +3,7 @@
 @import "normalize";
 @import "mmenu";
 @import "mburger";
+@import "animate.min";
 
 
 
@@ -301,6 +302,10 @@
     color: rgba(#fff, 0.3);
     padding: 34px 0;
 
+    &__copy{
+        margin-bottom: 0;
+    }
+    
     .menu{
         a:hover{
             color: $custom-green;

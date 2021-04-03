@@ -19,7 +19,9 @@ ReactDOM.render(
                   <b></b>
                 </a>
                 <NavMenu/>
-                <Socials/>
+                <Socials
+                  addClass="header-top__socials"
+                />
                 <div className="header-top__search">
                   <a href="#">
                       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="26" height="28" viewBox="0 0 26 28">
@@ -37,7 +39,7 @@ ReactDOM.render(
         </div>
        <div className="container">
         <div className="header-body">
-          <div className="header-body__info">
+          <div className="header-body__info wow animate__animated animate__fadeIn" data-wow-duration="1s">
             <h1 className="header-body__title">
               Hi, I’m Mirbek and I love creating Web apps
             </h1>
@@ -52,7 +54,7 @@ ReactDOM.render(
 							addClass="header-body__btn"
 						/>
           </div>
-          <div className="header-body__img">
+          <div className="header-body__img wow animate__animated animate__slideInRight" data-wow-duration="0.5s">
             <img src="img/header-body__img.svg" alt="web developing" />
           </div>
         </div>
@@ -63,12 +65,12 @@ ReactDOM.render(
         <section className="tools">
           <div className="container">
             <div className="tools__cards">
-              <div className="card card_design">
+              <div className="card card_design wow animate__animated animate__slideInLeft"  data-wow-duration="0.5s">
                 <img src="img/cards/01.png" alt="figma" />
                 <img src="img/cards/03.png" alt="photoshop" />
                 <img src="img/cards/02.png" alt="adobe illustrator" />
               </div>
-              <div className="card card_frontend">
+              <div className="card card_frontend wow animate__animated animate__slideInLeft"  data-wow-duration="0.7s">
                 <img src="img/cards/09.png" alt="html" />
                 <img src="img/cards/04.png" alt="css" />
                 <img src="img/cards/07.png" alt="react" />
@@ -76,14 +78,14 @@ ReactDOM.render(
                 <img src="img/cards/06.png" alt="jquery" />
                 <img src="img/cards/05.png" alt="js" />
               </div>
-              <div className="card card_backend">
+              <div className="card card_backend wow animate__animated animate__slideInLeft"  data-wow-duration="0.9s">
                 <img src="img/cards/10.png" alt="ejs" />
                 <img src="img/cards/11.png" alt="express" />
                 <img src="img/cards/12.png" alt="mongoose" />
                 <img src="img/cards/13.png" alt="mongodb" />
               </div>
             </div>
-            <div className="tools__info">
+            <div className="tools__info wow animate__animated animate__fadeIn" data-wow-duration="1s">
               <Heading 
 								title="What am I able to and which tools I use usually?"
 								text="I began my trip with design and thus i know designing tools: photoshop and figma. My frontendpage I do with React framework, backend side with Express.js and as database I use MongoDB "
@@ -107,47 +109,52 @@ ReactDOM.render(
 							title="My works"
 							text="My viewpoint is - in order to prove your skills it’s enought to show your works, your portfolio is your authentication!"
 							sectionName="works"
+              addClass="wow animate__animated animate__fadeIn"
+              dataWowDuration="1s"
 						/>
             <div className="works__portfolio">
               <WorkCard 
 								image="img/works/01.png"
 								name="name 1"
+                addClass="wow animate__animated animate__bounceIn"
+                dataWowDuration="0.6s"
+                dataWowDelay="0.1s"
 							/>
-              <div className="works__card">
-                <a href="#">
-                  <img src="img/works/02.png" alt="work 2" />
-                  <div className="black-overlay"></div>
-                  <div className="bottom-pop-up">Sample 2</div>
-                </a>
-              </div>
-              <div className="works__card">
-                <a href="#">
-                  <img src="img/works/03.png" alt="work 3" />
-                  <div className="black-overlay"></div>
-                  <div className="bottom-pop-up">Sample 3</div>
-                </a>
-              </div>
-              <div className="works__card">
-                <a href="#">
-                  <img src="img/works/04.png" alt="work 4" />
-                  <div className="black-overlay"></div>
-                  <div className="bottom-pop-up">Sample 4</div>
-                </a>
-              </div>
-              <div className="works__card">
-                <a href="#">
-                  <img src="img/works/05.png" alt="work 5" />
-                  <div className="black-overlay"></div>
-                  <div className="bottom-pop-up">Sample 5</div>
-                </a>
-              </div>
-              <div className="works__card">
-                <a href="#">
-                  <img src="img/works/06.png" alt="work 6" />
-                  <div className="black-overlay"></div>
-                  <div className="bottom-pop-up">Sample 6</div>
-                </a>
-              </div>
+              <WorkCard 
+								image="img/works/02.png"
+								name="name 2"
+                addClass="wow animate__animated animate__bounceIn"
+                dataWowDuration="0.6s"
+                dataWowDelay="0.2s"
+							/>
+              <WorkCard 
+								image="img/works/03.png"
+								name="name 3"
+                addClass="wow animate__animated animate__bounceIn"
+                dataWowDuration="0.6s"
+                dataWowDelay="0.3s"
+							/>
+              <WorkCard 
+								image="img/works/04.png"
+								name="name 4"
+                addClass="wow animate__animated animate__bounceIn"
+                dataWowDuration="0.6s"
+                dataWowDelay="0.4s"
+							/>
+              <WorkCard 
+								image="img/works/05.png"
+								name="name 5"
+                addClass="wow animate__animated animate__bounceIn"
+                dataWowDuration="0.6s"
+                dataWowDelay="0.5s"
+							/>
+              <WorkCard 
+								image="img/works/06.png"
+								name="name 6"
+                addClass="wow animate__animated animate__bounceIn"
+                dataWowDuration="0.6s"
+                dataWowDelay="0.6s"
+							/>
             </div>
           </div>
         </section>
@@ -177,7 +184,7 @@ ReactDOM.render(
                 <button className="btn" type="submit">Send me</button>
               </form>
             </div>
-            <div className="contacts__info">
+            <div className="contacts__info wow animate__animated animate__fadeIn" data-wow-duration="1s">
 							<Heading 
 								title="Contact me"
 								text="If you have any questions or want some consultation then feel free
@@ -223,64 +230,9 @@ ReactDOM.render(
               <li><a href="#">Contacts</a></li>
             </ul>
           </nav>
-          <div className="footer__socials socials">
-            <a href="#" className="twitter">
-              <svg
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                width="26"
-                height="28"
-                viewBox="0 0 26 28"
-              >
-                <title>twitter</title>
-                <path
-                  d="M25.312 6.375c-0.688 1-1.547 1.891-2.531 2.609 0.016 0.219 0.016 0.438 0.016 0.656 0 6.672-5.078 14.359-14.359 14.359-2.859 0-5.516-0.828-7.75-2.266 0.406 0.047 0.797 0.063 1.219 0.063 2.359 0 4.531-0.797 6.266-2.156-2.219-0.047-4.078-1.5-4.719-3.5 0.313 0.047 0.625 0.078 0.953 0.078 0.453 0 0.906-0.063 1.328-0.172-2.312-0.469-4.047-2.5-4.047-4.953v-0.063c0.672 0.375 1.453 0.609 2.281 0.641-1.359-0.906-2.25-2.453-2.25-4.203 0-0.938 0.25-1.797 0.688-2.547 2.484 3.062 6.219 5.063 10.406 5.281-0.078-0.375-0.125-0.766-0.125-1.156 0-2.781 2.25-5.047 5.047-5.047 1.453 0 2.766 0.609 3.687 1.594 1.141-0.219 2.234-0.641 3.203-1.219-0.375 1.172-1.172 2.156-2.219 2.781 1.016-0.109 2-0.391 2.906-0.781z"
-                ></path>
-              </svg>
-            </a>
-            <a href="#" className="facebook">
-              <svg
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="28"
-                viewBox="0 0 16 28"
-              >
-                <title>facebook</title>
-                <path
-                  d="M14.984 0.187v4.125h-2.453c-1.922 0-2.281 0.922-2.281 2.25v2.953h4.578l-0.609 4.625h-3.969v11.859h-4.781v-11.859h-3.984v-4.625h3.984v-3.406c0-3.953 2.422-6.109 5.953-6.109 1.687 0 3.141 0.125 3.563 0.187z"
-                ></path>
-              </svg>
-            </a>
-            <a href="#" className="instagram">
-              <svg
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="28"
-                viewBox="0 0 24 28"
-              >
-                <title>instagram</title>
-                <path
-                  d="M16 14c0-2.203-1.797-4-4-4s-4 1.797-4 4 1.797 4 4 4 4-1.797 4-4zM18.156 14c0 3.406-2.75 6.156-6.156 6.156s-6.156-2.75-6.156-6.156 2.75-6.156 6.156-6.156 6.156 2.75 6.156 6.156zM19.844 7.594c0 0.797-0.641 1.437-1.437 1.437s-1.437-0.641-1.437-1.437 0.641-1.437 1.437-1.437 1.437 0.641 1.437 1.437zM12 4.156c-1.75 0-5.5-0.141-7.078 0.484-0.547 0.219-0.953 0.484-1.375 0.906s-0.688 0.828-0.906 1.375c-0.625 1.578-0.484 5.328-0.484 7.078s-0.141 5.5 0.484 7.078c0.219 0.547 0.484 0.953 0.906 1.375s0.828 0.688 1.375 0.906c1.578 0.625 5.328 0.484 7.078 0.484s5.5 0.141 7.078-0.484c0.547-0.219 0.953-0.484 1.375-0.906s0.688-0.828 0.906-1.375c0.625-1.578 0.484-5.328 0.484-7.078s0.141-5.5-0.484-7.078c-0.219-0.547-0.484-0.953-0.906-1.375s-0.828-0.688-1.375-0.906c-1.578-0.625-5.328-0.484-7.078-0.484zM24 14c0 1.656 0.016 3.297-0.078 4.953-0.094 1.922-0.531 3.625-1.937 5.031s-3.109 1.844-5.031 1.937c-1.656 0.094-3.297 0.078-4.953 0.078s-3.297 0.016-4.953-0.078c-1.922-0.094-3.625-0.531-5.031-1.937s-1.844-3.109-1.937-5.031c-0.094-1.656-0.078-3.297-0.078-4.953s-0.016-3.297 0.078-4.953c0.094-1.922 0.531-3.625 1.937-5.031s3.109-1.844 5.031-1.937c1.656-0.094 3.297-0.078 4.953-0.078s3.297-0.016 4.953 0.078c1.922 0.094 3.625 0.531 5.031 1.937s1.844 3.109 1.937 5.031c0.094 1.656 0.078 3.297 0.078 4.953z"
-                ></path>
-              </svg>
-            </a>
-            <a href="#" className="linkedin">
-              <svg
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="28"
-                viewBox="0 0 24 28"
-              >
-                <title>linkedin</title>
-                <path
-                  d="M5.453 9.766v15.484h-5.156v-15.484h5.156zM5.781 4.984c0.016 1.484-1.109 2.672-2.906 2.672v0h-0.031c-1.734 0-2.844-1.188-2.844-2.672 0-1.516 1.156-2.672 2.906-2.672 1.766 0 2.859 1.156 2.875 2.672zM24 16.375v8.875h-5.141v-8.281c0-2.078-0.75-3.5-2.609-3.5-1.422 0-2.266 0.953-2.641 1.875-0.125 0.344-0.172 0.797-0.172 1.266v8.641h-5.141c0.063-14.031 0-15.484 0-15.484h5.141v2.25h-0.031c0.672-1.062 1.891-2.609 4.672-2.609 3.391 0 5.922 2.219 5.922 6.969z"
-                ></path>
-              </svg>
-            </a>
-          </div>
+          <Socials 
+            addClass="footer__socials"
+          />
         </div>
       </footer>
 	</div>, 

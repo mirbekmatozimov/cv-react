@@ -3,7 +3,7 @@ import React from "react";
 export default ()=>{
     return (
         <nav className="header-top__menu menu" id="my-menu">
-            <a href="#my-page" className="mburger mburger--collapse mburger-close">
+            <a href="#root" className="mburger mburger--collapse mburger-close">
                 <b></b>
                 <b></b>
                 <b></b>
