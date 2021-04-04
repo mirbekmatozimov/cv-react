@@ -21,7 +21,7 @@ function App(){
                   <b></b>
                   <b></b>
                 </a>
-                <NavMenu test={executeScroll} />
+                <NavMenu />
                 
                 <Socials
                   addClass="header-top__socials"

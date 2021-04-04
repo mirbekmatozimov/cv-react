@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 
 
-export default (props)=>{
+export default ()=>{
     return (
         <nav className="header-top__menu menu" id="my-menu">
             <a href="#root" className="mburger mburger--collapse mburger-close">
