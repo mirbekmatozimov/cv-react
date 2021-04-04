@@ -10,13 +10,6 @@ import AboutBody from "./pageComponents/AboutBody";
 
 
 function App(){
-  
-  const myRef = useRef(null);
-
-  const executeScroll=()=>{
-    myRef.current.scrollIntoView();
-  }
-
   return(
     <div id="mypage"> 
 			<header className="header" id="my-header">
@@ -54,7 +47,7 @@ function App(){
       <Route exact path="/" component={HomeBody} />
       <Route exact path="/about" component={AboutBody} />
 
-      <footer className="footer" ref={myRef}>
+      <footer className="footer">
         <div className="container"> 
           <p className="footer__copy">Copyright © 2021. All Rights Reserved.</p>
           <nav className="footer__menu menu">
