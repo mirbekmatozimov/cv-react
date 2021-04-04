@@ -3,7 +3,6 @@ const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const cssnano = require("cssnano");
 const autoprefixer = require("gulp-autoprefixer");
-const browserSync = require("browser-sync").create();
 const terser = require("gulp-terser");
 const concat = require("gulp-concat");
 var browserify = require("browserify");
@@ -55,37 +54,14 @@ function jsTask(){
     .pipe(dest("public/js",{sourcemaps: "."}));
 }
 
-//browser sync tasks
-
-function browserSyncInit(cb){
-    browserSync.init({
-        server:{
-            baseDir : "./public"
-        },
-        notify: false
-    });
-    cb();
-}
-
-function browserSyncReload(cb){
-    browserSync.reload();
-    cb()
-}
-
-//watch task
-
-function watchTask(){
-    watch("**/*.html", browserSyncReload);
-    // watch(["src/scss/**/*.scss","src/js/**/*.js"], series(scssTask, jsTask, browserSyncReload));
-    watch(["src/scss/**/*.scss", "src/**/*.jsx"], series(scssTask, jsBabelify, browserSyncReload));
-    watch("src/**/*.js", series(jsTask, browserSyncReload));
-}
+exports.watching = ()=>{
+    watch("src/scss/*.scss", scssTask);
+    watch(["src/js/*.js","src/components/*.jsx"], series(jsBabelify, jsTask));
+};
 
 exports.default = series(
   cssLibs,
   scssTask,
   jsTask,
-  jsBabelify,
-  browserSyncInit,
-  watchTask
+  jsBabelify
 );

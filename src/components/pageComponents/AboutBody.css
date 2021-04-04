@@ -1,0 +1,10 @@
+header.header{
+    height: auto;
+}
+.about-body{
+    min-height: 65vh;
+    padding-top: 3%;
+}
+h1{
+    margin-bottom: 10px;
+}
