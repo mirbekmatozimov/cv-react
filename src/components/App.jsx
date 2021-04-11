@@ -4,9 +4,9 @@ import NavMenu from "./NavMenu.jsx";
 import Socials from "./Socials.jsx";
 import Button from "./Button.jsx";
 import {Route} from "react-router-dom";
-import HomeHeader from "./pageComponents/HomeHeader";
-import HomeBody from "./pageComponents/HomeBody";
-import AboutBody from "./pageComponents/AboutBody";
+import HomeHeader from "./pageComponents/HomeHeader.jsx";
+import HomeBody from "./pageComponents/HomeBody.jsx";
+import AboutBody from "./pageComponents/AboutBody.jsx";
 
 
 function App(){

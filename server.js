@@ -1,13 +1,13 @@
-const express = require("express");
-const app = express();
-const port = 3000;
+const express = require('express')
+const app = express()
+const port = 8000
 
-app.use(express.static("public"));
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + "/index.html");
+  res.send("21312")
 })
 
-app.listen(port, ()=>{
-    console.log("Server is up an running on port " + port);
-});
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})
+
